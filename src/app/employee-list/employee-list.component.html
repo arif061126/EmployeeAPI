@@ -5,7 +5,7 @@
       <div class="card-header">
         <h2 class="text-center">Employee-list</h2>
       </div>
-      <div class="card-content text-center">
+      <div class="card-body text-center">
 
         <div class="table-scrollable">
 
@@ -27,9 +27,13 @@
                 <td>{{employee.employeeEmail}}</td>
                 <td>
 
+                  <button class="btn btn-primary" (click)="viewEmployee(employee.employeeId)">
+                    View
+                  </button>&nbsp;
+
                   <button class="btn btn-info" (click)="updateEmployee(employee.employeeId)">
                     Update
-                  </button>&nbsp;&nbsp;
+                  </button>&nbsp;
                   <button class="btn btn-danger" (click)="deleteEmployee(employee.employeeId)">
                     Delete
                   </button>
@@ -41,6 +45,12 @@
           </table>
         </div>
       </div>
+
+      <div class="card-footer text-center">
+        <button class="btn btn-outline-secondary" routerLink="">Backe to Home</button>
+      </div>
+
+
     </div>
 
   </div>
