@@ -1,0 +1,48 @@
+<main class="flex-shrink-0">
+  <div class="container">
+
+    <div class="card mt-2">
+      <div class="card-header">
+        <h2 class="text-center">Employee-list</h2>
+      </div>
+      <div class="card-content text-center">
+
+        <div class="table-scrollable">
+
+          <table class="m-auto table table-success table-striped table-hover table-responsive">
+            <thead>
+              <tr>
+                <th scope="col">ID</th>
+                <th scope="col">FirstName</th>
+                <th scope="col">LastName</th>
+                <th scope="col">E-mail</th>
+                <th scope="col">Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let employee of employees">
+                <th scope="row">{{employee.employeeId}}</th>
+                <td>{{employee.employeeFirstName}}</td>
+                <td>{{employee.employeeLastName}}</td>
+                <td>{{employee.employeeEmail}}</td>
+                <td>
+
+                  <button class="btn btn-info" (click)="updateEmployee(employee.employeeId)">
+                    Update
+                  </button>&nbsp;&nbsp;
+                  <button class="btn btn-danger" (click)="deleteEmployee(employee.employeeId)">
+                    Delete
+                  </button>
+
+                </td>
+              </tr>
+
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</main>

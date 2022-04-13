@@ -1,0 +1,40 @@
+<div class="container">
+  <div class="card mt-2">
+    <div class="card-header mt-2 text-center">
+      <h2>Update employee Information</h2>
+    </div>
+
+    <div class="container">
+      <form action="post" (ngSubmit)="onSubmit()">
+        <div class="card-content mt-2">
+
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">First Name</label>
+            <input type="text" name="employeeFastName" [(ngModel)]="employee.employeeFirstName" class="form-control"
+              id="exampleInputText" aria-describedby="emailHelp" required>
+          </div>
+
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Last
+              Name</label>
+            <input type="text" name="employeeLastName" class="form-control" id="exampleInputText"
+              aria-describedby="emailHelp" [(ngModel)]="employee.employeeLastName" required>
+          </div>
+
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Email
+              address</label>
+            <input type="email" name="employeeEmail" class="form-control" id="exampleInputEmail1"
+              aria-describedby="emailHelp" [(ngModel)]="employee.employeeEmail" required>
+          </div>
+
+        </div>
+        <div class="card-footer mt-2 text-center">
+          <button type="submit" class="btn btn-success">Save</button>&nbsp;&nbsp;&nbsp;
+          <button type="reset" class="btn btn-warning">Reset</button>
+        </div>
+      </form>
+    </div>
+
+  </div>
+</div>
