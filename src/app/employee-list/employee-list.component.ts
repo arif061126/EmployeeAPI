@@ -11,7 +11,6 @@ import { EmployeeService } from '../employee.service';
 export class EmployeeListComponent implements OnInit {
 
   employees: Employee[]; // this is because we use class of Employee
-  //employees: any;
 
   constructor(private employeeService: EmployeeService,
     private router: Router) { }
